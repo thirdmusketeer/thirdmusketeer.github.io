@@ -1,0 +1,17 @@
+import { StrictMode } from 'react'
+import { createRoot } from 'react-dom/client'
+import './style.css'
+import App from './App'
+
+// Apply saved theme before first paint
+const stored = localStorage.getItem('theme')
+const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches
+if (stored === 'dark' || (!stored && prefersDark)) {
+  document.documentElement.classList.add('dark')
+}
+
+createRoot(document.getElementById('root')).render(
+  <StrictMode>
+    <App />
+  </StrictMode>
+)
