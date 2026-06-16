@@ -13,7 +13,7 @@ export const variants = {
     overrides: {},
   },
   freelancer: {
-    label: "Freelancer",
+    label: "Contract Freelancer",
     experiences: [
       "zemoso-ebay",
       "polymerize",
