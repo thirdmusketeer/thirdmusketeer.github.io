@@ -50,20 +50,6 @@ export function Header({ meta }) {
         </a>
       </div>
 
-      <a
-        href="/?export=pdf"
-        target="_blank"
-        rel="noopener"
-        className="inline-flex items-center gap-1.5 mt-4 text-[13px] font-medium text-link dark:text-blue-400 border border-[#c6d7eb] dark:border-blue-900 bg-[#eef3f9] dark:bg-blue-950 px-3 py-1.5 rounded-md hover:bg-[#dce8f5] dark:hover:bg-blue-900 transition-colors no-underline hover:no-underline"
-      >
-        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-          <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
-          <polyline points="7 10 12 15 17 10"/>
-          <line x1="12" y1="15" x2="12" y2="3"/>
-        </svg>
-        Export PDF
-      </a>
-
       <p className="text-[clamp(16.5px,1.7vw,18.5px)] leading-[1.55] text-ink-soft dark:text-zinc-300 mt-[26px]">
         {meta.intro}
       </p>
