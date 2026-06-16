@@ -6,10 +6,17 @@ import { ExperienceSection } from './components/ExperienceSection'
 import { SkillsSection } from './components/SkillsSection'
 import { ExpertiseSection } from './components/ExpertiseSection'
 import { Footer } from './components/Footer'
+import { ResumePDF } from './components/ResumePDF'
 
 export default function App() {
   const [dark, setDark] = useTheme()
   const variant = useVariant()
+
+  // PDF export mode
+  const isPDF = new URLSearchParams(window.location.search).get('export') === 'pdf'
+  if (isPDF) {
+    return <ResumePDF variant={variant} />
+  }
 
   return (
     <div className="bg-paper dark:bg-zinc-950 text-ink dark:text-zinc-100 font-sans text-[16.5px] leading-[1.65] body-gradient transition-colors duration-300 min-h-screen">
